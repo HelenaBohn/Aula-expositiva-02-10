@@ -12,6 +12,7 @@
     $loggedInUser = $user -> login($_POST['email'], $_POST['password']);
 
     if($loggedInUser){
+        $auth -> loginUser ($loggedInUser);
         header("Location: index.php");    
     }else{
         echo "Login Falhou!";
