@@ -18,8 +18,8 @@
         echo "Login Falhou!";
     }
 }
-?>
 
+?>
 
 <html lang="en">
 <head>
@@ -30,6 +30,14 @@
 
 </head>
 <body>
-    
+
+    <header>
+        <h1>Login</h1>
+    </header>
+    <form action="login.php" method="POST">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="senha" placeholder="Password">
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>

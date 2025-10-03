@@ -16,7 +16,6 @@ class Auth{
         header("Location: index.php");
      }
 
-
 }
 
 ?>
