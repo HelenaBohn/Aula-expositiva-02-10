@@ -6,8 +6,7 @@
     $dbname = "banco_hash";
 
     try{
-         $conn = new PDO("mysql: host=$severname;dbname=$dbname"
-         $username,$password);
+         $conn = new PDO("mysql: host=$severname;dbname=$dbname", $username,$password);
 
          $conn -> setAtribute(PDO: : ATTR_ERRMODE, PDO: :ERRMODE_EXCEPTION);
         } catch(PDOException $e){
