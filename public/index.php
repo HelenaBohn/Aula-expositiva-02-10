@@ -1,36 +1,37 @@
 <?php
-    session_start();
+session_start();
 ?>
 
+<html lang="en">
 
-<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/style.css">
-
-    <title>index</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
-    
+
     <div class="container">
 
-        <h1> Bem vindo ao Crud com Foto</h1>
-
-     <br>
+    <h1> Bem-vindo ao CRUD com Foto </h1>
 
     <?php if (isset($_SESSION['user_id'])): ?>
-        <p>Hello, <?php echo htmlspecialchars($_SESSION['username']); ?></p>
-        <p>You're logged in</p>
-        <a href="dashboard.php">Access Dashboard</a>
-        <a href="logout.php">Log Out</a>
+
+        <p>Olá,<?php echo htmlspecialchars($_SESSION['username']);?>! Você está Logado! </p> 
+        <a href="dashboard.php">Ir para o dashboard.</a>
+        <a href="logout.php">Fazer logout.</a>
+
     <?php else: ?>
+        <p>Por favor faça seu <a href="login.php">Login</a> ou faça seu 
+        <a href="register.php">Registro</a></p>
 
-        <br>
+    <?php endif; ?>
 
-        <p> Por favor faça seu <a href="login.php"> Login</a> ou faça seu <a href="register.php"> Registro</a></p>
-  <?php endif; ?>
-</div>
+
+    </div>
 
 </body>
+
 </html>

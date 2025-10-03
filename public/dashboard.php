@@ -1,43 +1,48 @@
 <?php
-    include '../includes/db_connect.php';
-    include '../src/User.php';
-    include '../src/Auth.php';
-    session_start();
-    $auth = new Auth();
-    $user = new User($conn);
 
-    if(!$auth->isLoggedIn()) {
-        header("Location: login.php");
-        exit();
-    }
+include "../includes/db_connect.php";
+include "../src/Auth.php";
+include "../src/User.php";
 
-    $currentUser = $user-> getUserById($_SESSION['user_id'])
+session_start();
+$auth = new Auth();
+$user = new User($conn);
+
+if (!$auth->isLoggedIn()) {
+    header("Location: login.php");
+    exit();
+}
+
+$currentUser = $user->getUserById($_SESSION['user_id']);
+
 ?>
 
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/style.css">
-    <title>DashBoard</title>
+    <title>dashboard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>DashBoard</h1>
-    </header>
+
+    <div>
+        <h1> Bem-vindo, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
+        <br><br>
+        <img src="../uploads/<?php echo htmlspecialchars($currentUser['foto_perfil']); ?>" alt="Foto de Perfil" style="width: 150px; height: 150px; border-radius:50%;">
+        <br>
         <div>
-            <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
-            <br><br>
-            <img src="" alt="">
             <br>
-            <div>
-                <br>
-                <a href="upload_foto.php">Change profile picture</a>
-                <br>
-                <a href="logout.php">Log Out</a>
-                <br>
-                <a href="index.php">Home</a>
-            </div>
+            <a href="upload_foto.php"> Trocar Foto de Perfil</a>
+            <br>
+            <a href="logout.php">Sair</a>
+            <br>
+            <a href="index.php">Home</a>
         </div>
+    </div>
+
 </body>
+
 </html>
