@@ -1,5 +1,5 @@
 <?php
-    include "..;imcludes/db_connect.php";
+    include "../imcludes/db_connect.php";
     include "../src/User.php";
     include "../src/Auth.php";
 
