@@ -3,7 +3,7 @@
     class User{
         private $conn;
 
-    public function_construct($db){
+    public function __construct($db){
     $this -> conn = $db;
 }
 
