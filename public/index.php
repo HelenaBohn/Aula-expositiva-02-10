@@ -24,6 +24,8 @@
         <a href="logout.php">Log Out</a>
     <?php else: ?>
 
+        <br>
+
         <p> Por favor faça seu <a href="login.php"> Login</a> ou faça seu <a href="register.php"> Registro</a></p>
   <?php endif; ?>
 </div>
