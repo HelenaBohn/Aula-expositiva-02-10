@@ -23,10 +23,13 @@
 </head>
 <body>
     
+    <div class="field input">
     <form action="register.php" method="POST">
         <input type="text" name="nome" placeholder="Name">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="senha" placeholder="Password" placeholder="sua senha">
+    </div>
+
     </form>
 
 </body>
