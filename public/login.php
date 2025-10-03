@@ -5,7 +5,7 @@
 
     session_start();
 
-    if($_server['requeset_method'] == "post"){
+    if($_server['request_method'] == "post"){
     $user = new User($conn);
     $auth = new User();
 
