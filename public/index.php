@@ -17,6 +17,8 @@
 
         <h1> Bem vindo ao Crud com Foto</h1>
 
+     <br>
+
     <?php if (isset($_SESSION['user_id'])): ?>
         <p>Hello, <?php echo htmlspecialchars($_SESSION['username']); ?></p>
         <p>You're logged in</p>
